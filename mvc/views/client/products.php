@@ -14,7 +14,14 @@
   $listCategory = $result->fetch_all(MYSQLI_ASSOC);
   ?>
   <nav class="navbar">
-    <div class="logo">VICTOR STORE</div>
+    <div class="logo">
+      <div style="position: absolute;top: -40px;">
+        <img src="<?= URL_ROOT . '/public/images/logo.png' ?>" style="height: 80px;">
+      </div>
+      <div style="z-index: 9999;position: absolute;left: 66px;top: -20px;">
+        WATCH
+      </div>
+    </div>
     <div class="search-container">
       <form action="<?= URL_ROOT ?>/product/search" method="get">
         <input type="text" class="search" placeholder="Tìm kiếm.." name="keyword" value="<?= isset($_GET['keyword']) ? $_GET['keyword'] : "" ?>">

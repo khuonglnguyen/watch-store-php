@@ -1,6 +1,6 @@
 <footer>
     <div class="footer-content">
-      <p>Design & Develop by VICTOR STORE</p>
+      <p>Design & Develop by XWATCH</p>
     </div>
     <ul class="socials">
       <li><a href="#"><i class="fa fa-facebook"></i></a></li>

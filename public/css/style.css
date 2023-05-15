@@ -132,6 +132,7 @@ li {
 
 .logo {
   font-size: 32px;
+  position: relative;
 }
 
 .menu {

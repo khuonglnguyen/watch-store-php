@@ -14,7 +14,14 @@
   $listCategory = $result->fetch_all(MYSQLI_ASSOC);
   ?>
   <nav class="navbar">
-    <div class="logo">VICTOR STORE</div>
+    <div class="logo">
+      <div style="position: absolute;top: -40px;">
+        <img src="<?= URL_ROOT . '/public/images/logo.png' ?>" style="height: 80px;">
+      </div>
+      <div style="z-index: 9999;position: absolute;left: 66px;top: -20px;">
+        WATCH
+      </div>
+    </div>
     <div class="search-container">
       <form action="<?= URL_ROOT ?>/product/search" method="get">
         <input type="text" class="search" placeholder="Tìm kiếm.." name="keyword">
@@ -36,7 +43,7 @@
             ?>
           </ul>
         </li>
-          <li><a href="<?= URL_ROOT . "/blog" ?>">Blog <i class="fa fa-book"></i></a></li>
+        <li><a href="<?= URL_ROOT . "/blog" ?>">Blog <i class="fa fa-book"></i></a></li>
         <!--  -->
         <?php
         if (isset($_SESSION['user_id'])) { ?>
@@ -102,7 +109,7 @@
           <?php
           if ($key['promotionPrice'] < $key['originalPrice']) { ?>
             <div class="discount">
-              -<?= ceil(100-(($key['promotionPrice']/$key['originalPrice']*100))) ?>%
+              -<?= ceil(100 - (($key['promotionPrice'] / $key['originalPrice'] * 100))) ?>%
             </div>
           <?php }
           ?>
@@ -137,7 +144,7 @@
           <?php
           if ($key['promotionPrice'] < $key['originalPrice']) { ?>
             <div class="discount">
-              -<?=ceil(100-(($key['promotionPrice']/$key['originalPrice']*100))) ?>%
+              -<?= ceil(100 - (($key['promotionPrice'] / $key['originalPrice'] * 100))) ?>%
             </div>
           <?php }
           ?>
@@ -172,7 +179,7 @@
           <?php
           if ($key['promotionPrice'] < $key['originalPrice']) { ?>
             <div class="discount">
-              -<?=ceil(100-(($key['promotionPrice']/$key['originalPrice']*100))) ?>%
+              -<?= ceil(100 - (($key['promotionPrice'] / $key['originalPrice'] * 100))) ?>%
             </div>
           <?php }
           ?>
